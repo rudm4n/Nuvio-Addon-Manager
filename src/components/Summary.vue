@@ -9,7 +9,7 @@
           </svg>
         </div>
         <h3>Reorder Addons</h3>
-        <p>Drag and drop your addons into the perfect order. Your home screen, your way.</p>
+        <p>Drag and drop your addons into the perfect order. Control how streams are prioritized.</p>
       </div>
       <div class="feature-card card">
         <div class="feature-icon">
@@ -27,7 +27,7 @@
           </svg>
         </div>
         <h3>Safe & Private</h3>
-        <p>Everything runs in your browser. No data is stored on our servers.</p>
+        <p>Everything runs in your browser. Your credentials go directly to Nuvio's servers over HTTPS.</p>
       </div>
     </div>
 
@@ -35,16 +35,16 @@
       <h3>How does it work?</h3>
       <ol>
         <li>
-          <strong>Authenticate</strong> &mdash; Connect your Stremio account using your email &amp; password, or paste your auth key.
+          <strong>Sign In</strong> &mdash; Log in with your Nuvio account (the same one you use in the app).
         </li>
         <li>
-          <strong>Load Addons</strong> &mdash; Click the button to fetch your current addon list.
+          <strong>Load Addons</strong> &mdash; Fetch your current synced addon list from the cloud.
         </li>
         <li>
           <strong>Reorder &amp; Remove</strong> &mdash; Drag addons to rearrange or delete the ones you don't want.
         </li>
         <li>
-          <strong>Sync</strong> &mdash; Push the updated order back to your account and restart your app.
+          <strong>Sync</strong> &mdash; Push the updated order back to your account and restart the Nuvio app.
         </li>
       </ol>
     </div>

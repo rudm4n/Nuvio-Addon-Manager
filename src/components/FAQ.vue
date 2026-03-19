@@ -9,24 +9,24 @@ function toggle(index) {
 
 const faqs = [
   {
-    q: 'What risks are involved?',
-    a: 'This tool interacts with the Stremio API to manipulate your addon list. While generally safe, it is possible that changing addon order could affect some functionality. There is currently no built-in way to reset to a default configuration, so proceed with care.'
+    q: 'Do I need a Nuvio account?',
+    a: 'Yes. This tool connects to Nuvio\'s cloud backend (Supabase) to manage your synced addons. You need the same account you use in the Nuvio app. If you don\'t have cloud sync enabled, this tool won\'t be able to see your addons.'
   },
   {
     q: 'Are my credentials safe?',
-    a: 'Yes. Your credentials are sent directly from your browser to the official Stremio API (api.strem.io) over HTTPS. Nothing is stored on our servers — this is a fully client-side application. Once you refresh the page, all data is gone.'
+    a: 'Yes. Your credentials are sent directly from your browser to Nuvio\'s Supabase backend over HTTPS. This is a fully client-side application — nothing passes through or is stored on any intermediate server. Once you close the page, your session is gone.'
   },
   {
-    q: 'How do I get my Auth Key?',
-    a: 'Login to https://web.stremio.com/ using your credentials. Open the browser developer console (F12 or Ctrl+Shift+I) and paste: JSON.parse(localStorage.getItem("profile")).auth.key — the output is your auth key.'
+    q: 'What happens after I sync?',
+    a: 'After syncing, the new addon order is saved to the cloud. Next time you open the Nuvio app, it will pull the updated addon list during startup sync. You may need to restart the app to see the changes.'
   },
   {
-    q: 'Can I use this with Nuvio and Stremio?',
-    a: 'Yes! Since Nuvio uses the same Stremio addon protocol, this tool works with both apps. Any changes you make will be reflected in both Nuvio and Stremio after restarting the app.'
+    q: 'Will this affect my Stremio addons too?',
+    a: 'No. Nuvio has its own separate addon management system. Changes made here only affect your Nuvio addon list, not your Stremio installation.'
   },
   {
-    q: 'Can I move default catalogs?',
-    a: 'Yes! You can reorder the default Cinemeta catalogs (Popular, Featured, etc.) to any position. Note that the built-in "Continue Watching" catalog cannot be moved.'
+    q: 'What if I don\'t see all my addons?',
+    a: 'This tool only shows addons that have been synced to the cloud. If you installed addons while not logged in, or before enabling sync, they may only exist locally on your device. Open the Nuvio app, sign in, and trigger a sync to upload them first.'
   }
 ]
 </script>
