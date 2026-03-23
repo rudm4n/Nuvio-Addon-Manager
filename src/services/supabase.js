@@ -3,8 +3,8 @@
  * Communicates with Nuvio's Supabase backend for auth and addon management.
  */
 
-const SUPABASE_URL = (import.meta.env.VITE_SUPABASE_URL || '').replace(/\/$/, '')
-const SUPABASE_ANON_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY || ''
+const SUPABASE_URL = (import.meta.env.VITE_SUPABASE_URL || 'https://dpyhjjcoabcglfmgecug.supabase.co').replace(/\/$/, '')
+const SUPABASE_ANON_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY || 'eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRweWhqamNvYWJjZ2xmbWdlY3VnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA3ODYyNDcsImV4cCI6MjA4NjM2MjI0N30.U-3QSNDdpsnvRk_7ZL419AFTOtggHJJcmkodxeXjbkg'
 const SESSION_KEY = 'nuvio-addon-manager:session'
 
 export function isConfigured() {

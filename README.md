@@ -21,35 +21,59 @@ Web-based addon manager for [Nuvio](https://github.com/tapframe/NuvioStreaming).
 - Dark/light mode
 - Fully client-side (no data stored on our servers)
 
-## Setup
+## Deploy on HuggingFace Spaces
 
-### Environment Variables
+### 1. Fork this repo
 
-Create a `.env` file based on `.env.example`:
+Click **Fork** on GitHub.
+
+### 2. Create a HuggingFace Space
+
+1. Go to [huggingface.co/new-space](https://huggingface.co/new-space)
+2. Give it a name (e.g. `nuvio-addon-manager`)
+3. Select **Docker** as SDK
+4. Choose **Blank** template
+5. Click **Create Space**
+
+### 3. Push the code to HuggingFace
+
+```bash
+# Clone your fork
+git clone https://github.com/YOUR_USERNAME/Nuvio-Addon-Manager
+cd Nuvio-Addon-Manager
+
+# Add HuggingFace as remote
+git remote add hf https://huggingface.co/spaces/YOUR_HF_USERNAME/nuvio-addon-manager
+
+# Push
+git push hf main
+```
+
+That's it. HuggingFace will build the Docker image and deploy automatically. The app will be live at:
 
 ```
-VITE_SUPABASE_URL=your_supabase_project_url
-VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+https://YOUR_HF_USERNAME-nuvio-addon-manager.hf.space
 ```
 
-These should match the Supabase credentials used by your Nuvio instance.
+No configuration needed — the Nuvio Supabase keys are already included.
 
-### Development
+### Alternative: HuggingFace GUI upload
+
+1. Open your Space on HuggingFace
+2. Go to **Files** tab
+3. Click **Upload files**
+4. Upload all the files from this repo
+5. HuggingFace will auto-build and deploy
+
+## Local Development
 
 ```bash
 npm install
 npm run dev
 ```
 
-### Build
+## Build
 
 ```bash
 npm run build
 ```
-
-### Deploy to HuggingFace Spaces
-
-1. Create a new Space on HuggingFace with **Docker** SDK
-2. Push this repo to the Space
-3. Set `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` as build secrets/variables
-4. The app will be available on port 7860
